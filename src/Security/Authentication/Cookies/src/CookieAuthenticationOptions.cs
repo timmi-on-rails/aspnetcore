@@ -105,6 +105,12 @@ namespace Microsoft.AspNetCore.Authentication.Cookies
         public string ReturnUrlParameter { get; set; }
 
         /// <summary>
+        /// The DefaultReturnUrl will be used as a default for the ReturnUrlParameter value, if not set.
+        /// If the DefaultReturnUrl is null, then it will have no effect.
+        /// </summary>
+        public string DefaultReturnUrl { get; set; }
+
+        /// <summary>
         /// The Provider may be assigned to an instance of an object created by the application at startup time. The handler
         /// calls methods on the provider which give the application control at certain points where processing is occurring.
         /// If it is not provided a default instance is supplied which does nothing when the methods are called.
